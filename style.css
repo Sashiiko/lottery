@@ -1,0 +1,43 @@
+/* Вставьте в тег <style> в HTML */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Светлый фон страницы */
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Контейнер для позиционирования Canvas */
+.canvas-container {
+    position: relative;
+    /* Убедитесь, что контейнер имеет небольшой отступ, 
+       если Canvas не имеет фиксированных размеров */
+       margin-right: 400px;
+}
+
+/* Накладываем оба Canvas друг на друга */
+#prizeCanvas, #scratchCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Только верхнему Canvas даем рамку и курсор */
+#scratchCanvas {
+    border: 5px solid gold;
+    cursor: crosshair;
+}
+
+/* Стиль для сообщения о победе */
+#message {
+    visibility: hidden; /* Скрыто по умолчанию */
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: green;
+    font-weight: bold;
+}
